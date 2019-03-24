@@ -1,5 +1,5 @@
-#import matplotlib.pyplot as plt
-#import pandas
+import matplotlib.pyplot as plt
+import pandas
 import sys
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
@@ -23,11 +23,11 @@ def window():
 
 
 def b1_clicked():
-    print("Button 1 clicked")
+    plt.scatter(x,y)
 
 
 def b2_clicked():
-    print("Button 2 clicked")
+    plt.plot(x,y,'-','linewidth',2)
 
 
 window()

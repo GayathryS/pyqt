@@ -2,7 +2,7 @@ import sys
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from csvfinal import *
-
+import pandas
 
 class MainWindow(QMainWindow):
     def __init__(self, parent=None):
@@ -66,6 +66,8 @@ class MainWindow(QMainWindow):
             print(filename)
             self.filename = filename
             self.loadCsv(self.filename)
+            data = pandas.read_csv(self.filename)
+            print(data.iloc[:,-1])
         elif q.text() == "Edit data":
             # to be completed
             pass
